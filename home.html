@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textile Order & Shipment Management System</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+        }
+
+        /* Navbar */
+        nav {
+            background: #1e3a5f;
+            color: white;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
+                url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #ff9800;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* About */
+        .about {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .about h2 {
+            color: #1e3a5f;
+            margin-bottom: 20px;
+        }
+
+        /* Features */
+        .features {
+            padding: 60px 10%;
+            background: white;
+        }
+
+        .features h2 {
+            text-align: center;
+            color: #1e3a5f;
+            margin-bottom: 40px;
+        }
+
+        .feature-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #f4f6f9;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: #1e3a5f;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e3a5f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>TextileMS</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="order.html">Orders</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Shipment</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Textile Order & Shipment Management System</h1>
+            <p>
+                Manage buyer orders, production activities, inventory,
+                and shipments efficiently from a single platform.
+            </p>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>About Our Project</h2>
+        <p>
+            This web-based system helps textile companies track orders,
+            manage inventory, monitor production, and handle shipments
+            from order placement to final delivery.
+        </p>
+    </section>
+
+    <section class="features">
+        <h2>Core Features</h2>
+
+        <div class="feature-box">
+
+            <div class="card">
+                <h3>📦 Order Management</h3>
+                <p>Track and manage buyer orders easily.</p>
+            </div>
+
+            <div class="card">
+                <h3>🏭 Production Tracking</h3>
+                <p>Monitor production progress in real time.</p>
+            </div>
+
+            <div class="card">
+                <h3>📋 Inventory Control</h3>
+                <p>Manage fabric and accessory stock efficiently.</p>
+            </div>
+
+            <div class="card">
+                <h3>🚢 Shipment Tracking</h3>
+                <p>Track shipment status and delivery schedules.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Textile Order & Shipment Management System</p>
+    </footer>
+
+</body>
+
+</html>

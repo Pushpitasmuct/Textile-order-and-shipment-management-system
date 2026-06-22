@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+        }
+
+        /* Navbar */
+        nav {
+            background: #1e3a5f;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            margin: 30px auto;
+        }
+
+        /* Title */
+        .title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1e3a5f;
+        }
+
+        /* Form */
+        .form-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .form-box h3 {
+            margin-bottom: 20px;
+            color: #1e3a5f;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #218838;
+        }
+
+        /* Table */
+        .table-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        table th {
+            background: #1e3a5f;
+            color: white;
+        }
+
+        .edit-btn {
+            background: #ffc107;
+            color: black;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .delete-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .edit-btn:hover {
+            background: #e0a800;
+        }
+
+        .delete-btn:hover {
+            background: #c82333;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            background: #1e3a5f;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h2>TextileMS</h2>
+
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Production</a></li>
+            <li><a href="#">Shipments</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <h1 class="title">📦 Order Management</h1>
+
+        <!-- Add Order Form -->
+        <div class="form-box">
+
+            <h3>Add New Order</h3>
+
+            <form>
+
+                <div class="form-group">
+                    <label>Order ID</label>
+                    <input type="text" placeholder="Enter Order ID">
+                </div>
+
+                <div class="form-group">
+                    <label>Buyer Name</label>
+                    <input type="text" placeholder="Enter Buyer Name">
+                </div>
+
+                <div class="form-group">
+                    <label>Product Name</label>
+                    <input type="text" placeholder="Enter Product Name">
+                </div>
+
+                <div class="form-group">
+                    <label>Quantity</label>
+                    <input type="number" placeholder="Enter Quantity">
+                </div>
+
+                <div class="form-group">
+                    <label>Order Date</label>
+                    <input type="date">
+                </div>
+
+                <div class="form-group">
+                    <label>Status</label>
+                    <select>
+                        <option>Pending</option>
+                        <option>In Production</option>
+                        <option>Completed</option>
+                        <option>Shipped</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Add Order
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- Order Table -->
+        <div class="table-box">
+
+            <h3 style="margin-bottom:15px;">Order List</h3>
+
+            <table>
+
+                <tr>
+                    <th>Order ID</th>
+                    <th>Buyer</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+
+                <tr>
+                    <td>ORD001</td>
+                    <td>ABC Fashion Ltd.</td>
+                    <td>T-Shirt</td>
+                    <td>5000</td>
+                    <td>01-06-2026</td>
+                    <td>Pending</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>ORD002</td>
+                    <td>Global Wear</td>
+                    <td>Hoodie</td>
+                    <td>3000</td>
+                    <td>05-06-2026</td>
+                    <td>In Production</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>ORD003</td>
+                    <td>Urban Textile</td>
+                    <td>Jeans</td>
+                    <td>2000</td>
+                    <td>08-06-2026</td>
+                    <td>Shipped</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Textile Order & Shipment Management System</p>
+    </footer>
+
+</body>
+
+</html>
