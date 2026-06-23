@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipment Management</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+        }
+
+        nav {
+            background: #1e3a5f;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            margin: 30px auto;
+        }
+
+        .home-btn {
+            display: inline-block;
+            background: #1e3a5f;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            text-align: center;
+            color: #1e3a5f;
+            margin-bottom: 20px;
+        }
+
+        /* Stats */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+        }
+
+        .card h3 {
+            color: #1e3a5f;
+            font-size: 28px;
+        }
+
+        /* Form */
+
+        .form-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+            margin-bottom: 30px;
+        }
+
+        .form-box h2 {
+            color: #1e3a5f;
+            margin-bottom: 15px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Table */
+
+        .table-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #1e3a5f;
+            color: white;
+        }
+
+        .edit-btn {
+            background: #ffc107;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        .delete-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        footer {
+            margin-top: 40px;
+            background: #1e3a5f;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>TextileMS</h2>
+
+        <ul>
+            <li><a href="home.html">🏠 Home</a></li>
+            <li><a href="orders.html">📦 Orders</a></li>
+            <li><a href="inventory.html">📋 Inventory</a></li>
+            <li><a href="shipment.html">🚢 Shipment</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <a href="index.html" class="home-btn">🏠 Back to Home</a>
+
+        <h1 class="title">🚢 Shipment Management</h1>
+
+        <!-- Statistics -->
+
+        <div class="stats">
+
+            <div class="card">
+                <h3>125</h3>
+                <p>Total Shipments</p>
+            </div>
+
+            <div class="card">
+                <h3>35</h3>
+                <p>In Transit</p>
+            </div>
+
+            <div class="card">
+                <h3>80</h3>
+                <p>Delivered</p>
+            </div>
+
+            <div class="card">
+                <h3>10</h3>
+                <p>Pending</p>
+            </div>
+
+        </div>
+
+        <!-- Shipment Form -->
+
+        <div class="form-box">
+
+            <h2>Create Shipment</h2>
+
+            <input type="text" placeholder="Shipment ID">
+
+            <input type="text" placeholder="Order ID">
+
+            <input type="text" placeholder="Buyer Name">
+
+            <input type="text" placeholder="Destination">
+
+            <input type="date">
+
+            <select>
+                <option>Pending</option>
+                <option>In Transit</option>
+                <option>Delivered</option>
+            </select>
+
+            <button class="submit-btn">Create Shipment</button>
+
+        </div>
+
+        <!-- Shipment Table -->
+
+        <div class="table-box">
+
+            <h2 style="margin-bottom:15px;">Shipment List</h2>
+
+            <table>
+
+                <tr>
+                    <th>Shipment ID</th>
+                    <th>Order ID</th>
+                    <th>Buyer</th>
+                    <th>Destination</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+
+                <tr>
+                    <td>SHP001</td>
+                    <td>ORD001</td>
+                    <td>ABC Fashion Ltd.</td>
+                    <td>USA</td>
+                    <td>In Transit</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>SHP002</td>
+                    <td>ORD002</td>
+                    <td>Global Wear</td>
+                    <td>Germany</td>
+                    <td>Delivered</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>SHP003</td>
+                    <td>ORD003</td>
+                    <td>Urban Textile</td>
+                    <td>Canada</td>
+                    <td>Pending</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Textile Order & Shipment Management System</p>
+    </footer>
+
+</body>
+
+</html>

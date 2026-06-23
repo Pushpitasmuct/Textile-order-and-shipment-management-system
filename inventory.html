@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+        }
+
+        /* Navbar */
+        nav {
+            background: #1e3a5f;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            margin: 30px auto;
+        }
+
+        .title {
+            text-align: center;
+            color: #1e3a5f;
+            margin-bottom: 20px;
+        }
+
+        /* Home Button */
+        .home-btn {
+            display: inline-block;
+            background: #1e3a5f;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Cards */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: #1e3a5f;
+            font-size: 28px;
+        }
+
+        /* Form */
+        .form-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .form-box h2 {
+            margin-bottom: 15px;
+            color: #1e3a5f;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Table */
+        .table-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #1e3a5f;
+            color: white;
+        }
+
+        .edit {
+            background: #ffc107;
+            color: black;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .delete {
+            background: #dc3545;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            background: #1e3a5f;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>TextileMS</h2>
+
+        <ul>
+            <li><a href="home.html">🏠 Home</a></li>
+            <li><a href="orders.html">📦 Orders</a></li>
+            <li><a href="inventory.html">📋 Inventory</a></li>
+            <li><a href="#">🏭 Production</a></li>
+            <li><a href="#">🚢 Shipment</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <a href="index.html" class="home-btn">🏠 Back to Home</a>
+
+        <h1 class="title">📋 Inventory Management</h1>
+
+        <!-- Statistics -->
+
+        <div class="stats">
+
+            <div class="card">
+                <h3>1500</h3>
+                <p>Fabric Stock</p>
+            </div>
+
+            <div class="card">
+                <h3>850</h3>
+                <p>Accessories</p>
+            </div>
+
+            <div class="card">
+                <h3>120</h3>
+                <p>Low Stock Items</p>
+            </div>
+
+            <div class="card">
+                <h3>2470</h3>
+                <p>Total Inventory</p>
+            </div>
+
+        </div>
+
+        <!-- Add Inventory -->
+
+        <div class="form-box">
+
+            <h2>Add Inventory Item</h2>
+
+            <input type="text" placeholder="Item Name">
+
+            <select>
+                <option>Fabric</option>
+                <option>Thread</option>
+                <option>Button</option>
+                <option>Zipper</option>
+                <option>Label</option>
+            </select>
+
+            <input type="number" placeholder="Quantity">
+
+            <input type="text" placeholder="Supplier Name">
+
+            <button>Add Item</button>
+
+        </div>
+
+        <!-- Inventory Table -->
+
+        <div class="table-box">
+
+            <h2 style="margin-bottom:15px;">Inventory List</h2>
+
+            <table>
+
+                <tr>
+                    <th>Item ID</th>
+                    <th>Item Name</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Supplier</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+
+                <tr>
+                    <td>INV001</td>
+                    <td>Cotton Fabric</td>
+                    <td>Fabric</td>
+                    <td>500</td>
+                    <td>ABC Textile</td>
+                    <td>Available</td>
+                    <td>
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>INV002</td>
+                    <td>Buttons</td>
+                    <td>Accessories</td>
+                    <td>1000</td>
+                    <td>Fashion Parts Ltd</td>
+                    <td>Available</td>
+                    <td>
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>INV003</td>
+                    <td>Zippers</td>
+                    <td>Accessories</td>
+                    <td>80</td>
+                    <td>Zip World</td>
+                    <td>Low Stock</td>
+                    <td>
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Textile Order & Shipment Management System</p>
+    </footer>
+
+</body>
+
+</html>
