@@ -19,6 +19,7 @@
         }
 
         /* Navbar */
+
         nav {
             background: #1e3a5f;
             color: white;
@@ -26,6 +27,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+
+        nav h2 {
+            color: white;
         }
 
         nav ul {
@@ -40,13 +45,22 @@
         nav ul li a {
             color: white;
             text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ff9800;
         }
 
         /* Hero Section */
+
         .hero {
             height: 80vh;
-            background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
+            background:
+                linear-gradient(rgba(0, 0, 0, .6),
+                    rgba(0, 0, 0, .6)),
                 url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a");
+
             background-size: cover;
             background-position: center;
             color: white;
@@ -78,7 +92,53 @@
             border-radius: 5px;
         }
 
-        /* About */
+        .btn:hover {
+            background: #e68900;
+        }
+
+        /* Sign In Section */
+
+        .login-section {
+            padding: 60px 10%;
+            display: flex;
+            justify-content: center;
+            background: white;
+        }
+
+        .login-box {
+            width: 500px;
+            background: #f4f6f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+            text-align: center;
+        }
+
+        .login-box h2 {
+            color: #1e3a5f;
+            margin-bottom: 15px;
+        }
+
+        .login-box p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .login-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #1e3a5f;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .login-btn:hover {
+            background: #294b74;
+        }
+
+        /* About Section */
+
         .about {
             padding: 60px 10%;
             text-align: center;
@@ -89,7 +149,8 @@
             margin-bottom: 20px;
         }
 
-        /* Features */
+        /* Features Section */
+
         .features {
             padding: 60px 10%;
             background: white;
@@ -112,7 +173,7 @@
             padding: 25px;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
         }
 
         .card h3 {
@@ -121,6 +182,7 @@
         }
 
         /* Footer */
+
         footer {
             background: #1e3a5f;
             color: white;
@@ -128,42 +190,90 @@
             padding: 20px;
         }
     </style>
+
 </head>
 
 <body>
 
+    <!-- Navbar -->
+
     <nav>
-        <h2>TextileMS</h2>
+
+        <h2>🧵 TextileMS</h2>
+
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="order.html">Orders</a></li>
             <li><a href="inventory.html">Inventory</a></li>
+            <li><a href="production.html">Production</a></li>
             <li><a href="shipment.html">Shipment</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+
     </nav>
 
+    <!-- Hero Section -->
+
     <section class="hero">
+
         <div class="hero-content">
+
             <h1>Textile Order & Shipment Management System</h1>
+
             <p>
-                Manage buyer orders, production activities, inventory,
-                and shipments efficiently from a single platform.
+                Manage buyer orders, inventory, production,
+                and shipment activities efficiently from
+                a single platform.
             </p>
-            <a href="#" class="btn">Get Started</a>
+
+            <a href="login.html" class="btn">
+                Get Started
+            </a>
+
         </div>
+
     </section>
+
+    <!-- Login Redirect Section -->
+
+    <section class="login-section">
+
+        <div class="login-box">
+
+            <h2>🔐 Secure Login Portal</h2>
+
+            <p>
+                Admins and Users can access the system
+                through the login page to manage textile
+                operations efficiently.
+            </p>
+
+            <a href="login.html" class="login-btn">
+                Go to Login Page
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- About Section -->
 
     <section class="about">
+
         <h2>About Our Project</h2>
+
         <p>
-            This web-based system helps textile companies track orders,
-            manage inventory, monitor production, and handle shipments
-            from order placement to final delivery.
+            This web-based system helps textile companies
+            manage orders, inventory, production activities,
+            and shipments from order placement to final delivery.
         </p>
+
     </section>
 
+    <!-- Features Section -->
+
     <section class="features">
+
         <h2>Core Features</h2>
 
         <div class="feature-box">
@@ -189,10 +299,17 @@
             </div>
 
         </div>
+
     </section>
 
+    <!-- Footer -->
+
     <footer>
-        <p>© 2026 Textile Order & Shipment Management System</p>
+
+        <p>
+            © 2026 Textile Order & Shipment Management System
+        </p>
+
     </footer>
 
 </body>
